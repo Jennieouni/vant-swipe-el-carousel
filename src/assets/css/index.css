@@ -1,0 +1,366 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+img{
+  max-width: 100%;
+}
+.content {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  height: 100vh;
+  background: #cfdaee;
+  text-align: center;
+}
+@media screen and (max-width :1025px){
+  .van-swipe{
+    overflow: hidden;
+  }
+}
+.van-swipe {
+  /* overflow: hidden; */
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  /* touch-action: pan-y; */
+}
+
+.content .item_box {
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all .5s .5s;
+  transition: all .5s .5s;
+  /* touch-action: pan-x */
+}
+
+.content .item1 {
+  background: url('/static/images/h5_index_img_bg1.png') no-repeat 50%;
+  background-size: cover;
+}
+
+.content .item2 {
+  background: url('/static/images/h5_bifen_img_bg1.png') no-repeat 50%;
+  background-size: cover;
+}
+
+.content .item3 {
+  background: url('/static/images/h5_zhibo_img_bg1.png') no-repeat 50%;
+  background-size: cover;
+}
+
+.content .item4 {
+  background: url('/static/images/h5_zixun_img_bg1.png') no-repeat 50%;
+  background-size: cover;
+}
+
+.van-swipe-item {
+  position: relative;
+}
+
+.el-carousel {
+  width: 86vw;
+  max-width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.el-carousel .el-carousel__container {
+  height: 38vh !important;
+}
+
+.el-carousel .el-carousel__container .light_img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .down-wrap {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+}
+@media screen and (max-width: 300px) {
+  .content .download_button{
+    width: 90%;
+    height: 9%;
+  }
+}
+.content .download_button {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -32.85vw;
+  width: 65.7vw;
+  height: 13vh;
+  /* background: url('/static/images/h5_download_btn.png') no-repeat 50%;
+  background-size: cover; */
+}
+
+.content .arrow {
+  position: absolute;
+  width: 1rem;
+  bottom: 0;
+  left: 50%;
+  margin-left: -.2rem;
+  -webkit-animation: arrowUp .8s linear infinite;
+  animation: arrowUp .8s linear infinite;
+}
+
+@keyframes arrowUp {
+  0% {
+    bottom: 1rem
+  }
+
+  to {
+    bottom: .5rem
+  }
+}
+
+@-webkit-keyframes arrowUp {
+  0% {
+    bottom: 1rem
+  }
+
+  to {
+    bottom: .5rem
+  }
+}
+
+.content .bifen_img {
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%) scale(1);
+  transform: translate(-50%) scale(1);
+  top: 42.9%;
+  z-index: 5;
+  -webkit-animation: scaleAn .5s linear .5s;
+  animation: scaleAn .5s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scaleAn {
+  0% {
+    -webkit-transform: translate(-50%) scale(1);
+    transform: translate(-50%) scale(1)
+  }
+
+  60% {
+    -webkit-transform: translate(-50%) scale(1.8);
+    transform: translate(-50%) scale(1.8)
+  }
+
+  to {
+    -webkit-transform: translate(-50%) scale(1.5);
+    transform: translate(-50%) scale(1.5)
+  }
+}
+
+@-webkit-keyframes scaleAn {
+  0% {
+    -webkit-transform: translate(-50%) scale(1);
+    transform: translate(-50%) scale(1)
+  }
+
+  60% {
+    -webkit-transform: translate(-50%) scale(1.8);
+    transform: translate(-50%) scale(1.8)
+  }
+
+  to {
+    -webkit-transform: translate(-50%) scale(1.5);
+    transform: translate(-50%) scale(1.5)
+  }
+}
+
+.content .people_img {
+  width: 40%;
+  position: absolute;
+  left: 46%;
+  top: 42.84%;
+  z-index: 10;
+}
+
+.content .shequ {
+  width: 77%;
+  position: absolute;
+  top: 39.6%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.content .people {
+  width: 31%;
+  position: absolute;
+  -webkit-transition: all .5s .8s;
+  transition: all .5s .8s;
+  right: 15%;
+  top: 42.5%;
+}
+
+.content .bullet1 {
+  position: absolute;
+  right: -3.06667rem;
+  width: 16%;
+  top: 28.31%;
+  -webkit-animation: mymove 5s linear infinite;
+  animation: mymove 5s linear infinite;
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
+}
+
+.content .bullet2 {
+  position: absolute;
+  right: -3.06667rem;
+  width: 16%;
+  top: 33%;
+  -webkit-animation: mymove 4s linear infinite;
+  animation: mymove 4s linear infinite;
+  -webkit-animation-delay: .8s;
+  animation-delay: 2s;
+}
+
+.content .bullet3 {
+  position: absolute;
+  right: 45%;
+  width: 47%;
+  top: 66.83%;
+}
+.content .active .bullet3 {
+  -webkit-transition: all 1s linear 1.5s;
+  transition: all 1s linear 1.5s;
+  right: 45%;
+}
+.content .active .bullet4 {
+  -webkit-transition: all 1s linear 2.2s;
+  transition: all 1s linear 2.2s;
+  right: 10%;
+}
+
+.content .bullet4 {
+  position: absolute;
+  right: 10%;
+  width: 63.5%;
+  top: 72.9%;
+  -webkit-transition: all 1s linear 2.2s;
+  transition: all 1s linear 2.2s;
+}
+
+@keyframes mymove {
+  0% {
+    right: -10%
+  }
+
+  to {
+    right: 90%
+  }
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    right: -30%
+  }
+
+  to {
+    right: 110%
+  }
+}
+
+.content .heart1 {
+  position: absolute;
+  width: 6%;
+  top: 65.5%;
+  left: 13%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  animation: heartAn 1.5s linear .8s infinite;
+}
+
+.content .heart2 {
+  position: absolute;
+  width: 6%;
+  top: 69.7%;
+  left: 13%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  animation: heartAn 1.5s linear .2s infinite;
+}
+@keyframes heartAn {
+  0% {
+    -webkit-transform: scale(0deg);
+    transform: scale(0deg);
+    top: 65.5%;
+    left: 13%
+  }
+
+  25% {
+    -webkit-transform: scale(.25) rotate(20deg);
+    transform: scale(.25) rotate(20deg);
+    top: 64.5%;
+    left: 10%
+  }
+
+  50% {
+    -webkit-transform: scale(.5) rotate(0deg);
+    transform: scale(.5) rotate(0deg);
+    top: 63.5%;
+    left: 14%
+  }
+
+  75% {
+    -webkit-transform: scale(.75) rotate(-20deg);
+    transform: scale(.75) rotate(-20deg);
+    top: 62.5%;
+    left: 13%
+  }
+
+  to {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+    top: 61.5%;
+    left: 10%
+  }
+}
+
+@-webkit-keyframes heartAn {
+  0% {
+    -webkit-transform: scale(0deg);
+    transform: scale(0deg);
+    top: 65.5%;
+    left: 13%
+  }
+
+  25% {
+    -webkit-transform: scale(.25) rotate(20deg);
+    transform: scale(.25) rotate(20deg);
+    top: 64.5%;
+    left: 10%
+  }
+
+  50% {
+    -webkit-transform: scale(.5) rotate(0deg);
+    transform: scale(.5) rotate(0deg);
+    top: 63.5%;
+    left: 14%
+  }
+
+  75% {
+    -webkit-transform: scale(.75) rotate(-20deg);
+    transform: scale(.75) rotate(-20deg);
+    top: 62.5%;
+    left: 13%
+  }
+
+  to {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+    top: 61.5%;
+    left: 10%
+  }
+}
